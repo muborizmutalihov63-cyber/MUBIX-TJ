@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MUBIX TJ — Вебсайт, Telegram-бот ва AI-админ барои тиҷорат</title>
+<meta name="description" content="MUBIX TJ — сохтани вебсайтҳои замонавӣ барои тиҷорат. Создание современных сайтов для бизнеса. Modern websites for business.">
+<meta property="og:title" content="MUBIX TJ">
+<meta property="og:description" content="Websites for business — Тоҷикӣ · Русский · English">
+<meta name="theme-color" content="#0A1224">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"MUBIX TJ","telephone":"+992714577575"}</script>
+<style>
+:root{--ink:#0B1B3A;--blue:#2457F5;--blue2:#1A46D4;--alt:#F4F7FB;--line:#E3E9F2;--mut:#5B6B85;--bd:#CBD5E5;color-scheme:light}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px;background:#fff}
+body{font:400 16px/1.65 Inter,system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-text-size-adjust:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid #8FB0FF;outline-offset:2px}
+[hidden]{display:none!important}
+.w{max-width:1160px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:12px;font:600 15px Inter,sans-serif;border:0;cursor:pointer;text-decoration:none;background:var(--blue);color:#fff;box-shadow:0 6px 16px -4px rgba(36,87,245,.4);transition:background .2s,transform .15s,box-shadow .2s,color .2s}
+.btn:hover{background:var(--blue2);transform:translateY(-1px)}
+.btn.g,.lq{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px var(--bd)}
+.btn.g:hover,.lq:hover{background:#fff;color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue)}
+.btn.wa{background:#25D366;color:#06260f;box-shadow:none}.btn.wa:hover{background:#1fbd5b}
+.btn.big{padding:16px 24px;width:100%}
+svg.i{width:18px;height:18px;fill:currentColor}
+svg.ic{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#sp{position:fixed;top:0;left:0;height:3px;width:0;background:var(--blue);z-index:70}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hb{display:flex;align-items:center;gap:22px;height:68px}
+.logo{white-space:nowrap;font:800 22px Inter,sans-serif;letter-spacing:-.02em;text-decoration:none;display:inline-flex;align-items:center}
+.logo i{font:700 11px Inter,sans-serif;letter-spacing:.06em;background:var(--blue);color:#fff;padding:3px 7px;border-radius:6px;margin-left:7px}
+nav ul{display:flex;gap:16px;list-style:none;padding:0;font-size:14px;font-weight:500;align-items:center}
+nav a{white-space:nowrap;text-decoration:none;color:#3B4A66;transition:color .2s}nav a:hover{color:var(--blue)}
+nav .btn{color:#fff;padding:9px 18px;font-size:14px}nav .btn:hover{color:#fff}
+.lg{display:flex;margin-left:auto}
+.lg button{background:#fff;border:1px solid var(--bd);color:var(--ink);font:600 12px Inter;padding:6px 10px;cursor:pointer;margin-left:-1px}
+.lg button:first-child{border-radius:8px 0 0 8px;margin:0}.lg button:last-child{border-radius:0 8px 8px 0}
+.lg button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+#bg{display:none;background:#fff;border:1px solid var(--bd);color:var(--ink);width:42px;height:40px;border-radius:10px;font-size:20px;cursor:pointer}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--alt),#fff);padding:clamp(50px,7vw,100px) 0 clamp(60px,8vw,100px)}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(rgba(36,87,245,.16) 1px,transparent 1.3px) 0 0/24px 24px;-webkit-mask-image:linear-gradient(to bottom,#000,transparent 80%);mask-image:linear-gradient(to bottom,#000,transparent 80%);pointer-events:none}
+.hg{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.ey{display:inline-block;font:600 12px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);background:#E8EEFF;padding:7px 14px;border-radius:999px;margin-bottom:22px}
+.hero h1{font:800 clamp(36px,5.1vw,64px)/1.06 Inter,sans-serif;letter-spacing:-.035em;margin-bottom:20px}
+.hero h1 span,.hero h1 em{display:block}
+.at{font-style:normal;background:linear-gradient(90deg,#2457F5,#0EA5E9);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-bottom:.06em}
+.hero p{font-size:clamp(16px,1.6vw,19px);color:var(--mut);max-width:540px;margin-bottom:30px}
+.ba{display:flex;gap:12px;flex-wrap:wrap}
+.mr{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:34px;font:500 14px Inter,sans-serif;color:#3B4A66}
+.mr span{display:inline-flex;align-items:center;gap:8px}.mr svg{color:var(--blue);width:18px;height:18px}
+.vis{position:relative;height:470px}
+.bw{position:absolute;right:0;top:0;width:88%;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -22px rgba(11,27,58,.28);overflow:hidden;animation:fl 7s ease-in-out infinite}
+.bt{display:flex;gap:6px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line);background:#F8FAFD}
+.bt b{width:9px;height:9px;border-radius:50%;background:#D5DDEC}
+.bt span{margin-left:10px;flex:1;background:#fff;border:1px solid var(--line);border-radius:6px;font-size:11px;color:var(--mut);padding:2px 10px}
+.bb{padding:16px;display:grid;gap:12px}
+.bh{position:relative;height:124px;border-radius:10px;background:linear-gradient(135deg,#2457F5,#0EA5E9)}
+.bh i{position:absolute;left:18px;height:10px;border-radius:5px;background:rgba(255,255,255,.9)}
+.bh i:nth-child(1){top:30px;width:55%}.bh i:nth-child(2){top:52px;width:36%;opacity:.6}.bh i:nth-child(3){top:84px;width:70px;height:22px;border-radius:7px}
+.bl{height:10px;border-radius:5px;background:#E6ECF6}
+.b3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.b3 i{height:62px;border-radius:10px;background:#F1F5FB;border:1px solid var(--line)}
+.ph{position:absolute;left:0;bottom:6px;width:250px;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 60px -18px rgba(11,27,58,.32);overflow:hidden;animation:fl 7s ease-in-out -3s infinite}
+.pt{display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--blue);color:#fff;font:600 13px Inter}
+.pt::before{content:"";width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.3)}
+.pm{padding:12px;display:grid;gap:8px;background:#F6F8FC}
+.mg{max-width:86%;padding:8px 12px;border-radius:14px;font-size:12.5px;line-height:1.4}
+.mg.l{background:#fff;border:1px solid var(--line);justify-self:start;border-bottom-left-radius:4px}
+.mg.r{background:var(--blue);color:#fff;justify-self:end;border-bottom-right-radius:4px}
+.aic{position:absolute;right:6%;bottom:-4px;display:flex;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font:600 13px Inter;box-shadow:0 14px 30px -10px rgba(11,27,58,.5);animation:fl 7s ease-in-out -1.5s infinite}
+.aic i{width:8px;height:8px;border-radius:50%;background:#34D399;box-shadow:0 0 0 4px rgba(52,211,153,.25)}
+@keyframes fl{50%{transform:translateY(-10px)}}
+.bf,.pu{opacity:0;animation:bf .9s cubic-bezier(.2,.7,.2,1) var(--d) forwards}
+@keyframes bf{from{opacity:0;filter:blur(8px);transform:translateY(24px)}to{opacity:1;filter:blur(0);transform:none}}
+@keyframes fo{to{opacity:1}}
+.rv{opacity:0;filter:blur(8px);transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) var(--d,0s),filter .8s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .8s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.rv.in{opacity:1;filter:none;transform:none}
+section.s{padding:clamp(72px,10vw,120px) 0;position:relative}
+#services,#types,#order{background:var(--alt)}
+h2{font:800 clamp(30px,3.9vw,46px)/1.1 Inter,sans-serif;letter-spacing:-.03em;margin-bottom:16px}
+h3{font:600 17px/1.35 Inter,sans-serif;margin-bottom:6px}
+.lead{color:var(--mut);font-size:17px;max-width:520px}
+.big{font:600 clamp(24px,3.2vw,40px)/1.3 Inter,sans-serif;letter-spacing:-.02em;max-width:980px;margin-top:28px}
+.big span{opacity:.2;transition:opacity .5s}.big span.on{opacity:1}
+.sp{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
+.stk{position:sticky;top:110px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:30px 0;border-top:1px solid var(--line);transition:padding .35s,opacity .8s,filter .8s,transform .8s}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row h3{font:700 clamp(21px,2.3vw,28px)/1.2 Inter,sans-serif;letter-spacing:-.02em;margin:0;transition:color .3s}
+.row p{color:var(--mut)}
+.row:hover{padding-left:12px}.row:hover h3{color:var(--blue)}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.ar{display:flex;gap:10px;margin-bottom:18px}
+.ar button{width:46px;height:46px;border-radius:50%;border:0;font-size:18px;cursor:pointer}
+.rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 30px;margin:30px -20px 0;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.cd{--x:50%;--y:0;flex:0 0 min(310px,80vw);scroll-snap-align:start;min-height:390px;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:18px;padding:26px;background:radial-gradient(280px circle at var(--x) var(--y),rgba(36,87,245,.09),transparent 65%),#fff;box-shadow:0 1px 2px rgba(11,27,58,.04)}
+.tic{width:46px;height:46px;fill:none;stroke:var(--blue);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:auto}
+.cd h3{font:700 24px/1.15 Inter,sans-serif;letter-spacing:-.02em;margin:60px 0 10px}
+.cd p{color:var(--mut);font-size:15px;margin-bottom:22px;min-height:3.3em}
+.cd .btn{align-self:flex-start}
+.sv{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.sv .cd{flex:none;min-height:0}.sv .tic{margin-bottom:0}.sv .cd h3{margin:24px 0 10px}.sv .cd p{min-height:0;margin-bottom:16px}
+.sv ul{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:8px}
+.sv li{position:relative;padding-left:20px;font-size:14px;color:#3B4A66}
+.sv li::before{content:"";position:absolute;left:0;top:.5em;width:8px;height:8px;border-radius:50%;background:#CFE0FF;border:2px solid var(--blue)}
+.sv .btn{margin-top:auto;align-self:flex-start}
+.tw{position:relative;padding-left:44px}
+.tw::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.fl{position:absolute;left:7px;top:6px;width:2px;height:0;background:var(--blue)}
+#hw{list-style:none;padding:0;display:grid;gap:52px}
+#hw li{position:relative;opacity:.35;transition:opacity .5s}#hw li.on{opacity:1}
+#hw li::before{content:"";position:absolute;left:-44px;top:8px;width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid var(--bd);transition:.4s}
+#hw li.on::before{border-color:var(--blue);background:var(--blue);box-shadow:0 0 0 5px rgba(36,87,245,.15)}
+#hw h3{font:700 clamp(22px,2.6vw,30px)/1.2 Inter,sans-serif;letter-spacing:-.02em;margin-bottom:8px}
+#hw p{color:var(--mut);max-width:460px}
+.pk{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+.pb{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:8px;padding:24px 22px;border:1.5px solid var(--line);border-radius:16px;background:#fff;transition:border-color .25s,background .25s,box-shadow .25s,opacity .8s,filter .8s,transform .8s}
+.pb:hover{border-color:#9DB6FF}.pb:focus-visible{outline:3px solid #8FB0FF;outline-offset:2px}
+.pb[aria-pressed=true]{border-color:var(--blue);background:#EEF3FF;box-shadow:0 10px 30px -12px rgba(36,87,245,.5)}
+.pb svg{width:30px;height:30px;fill:none;stroke:var(--blue);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:10px}
+.pb b{font:700 20px/1.2 Inter,sans-serif;letter-spacing:-.02em}.pb span{font-size:13px;color:var(--mut);line-height:1.4}
+.cs{display:grid;grid-template-columns:250px 1fr;margin-top:36px;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 24px 60px -30px rgba(11,27,58,.25)}
+.sl{padding:26px 16px;border-right:1px solid var(--line);background:var(--alt)}
+#stl{list-style:none;padding:0;display:grid;gap:4px}
+#stl button{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:10px;font:500 14px Inter;color:#8493AD}
+#stl button:focus-visible{outline:2px solid var(--blue)}
+#stl button::before{content:"";width:10px;height:10px;border-radius:50%;border:2px solid currentColor;flex:none}
+#stl li.on button{color:var(--ink);background:#E3EBFF}
+#stl li.on button::before{background:var(--blue);border-color:var(--blue)}
+#stl li.dn button{color:var(--blue);cursor:pointer}#stl li.dn button::before{background:currentColor}
+.pane{padding:34px;min-width:0}
+.pn{font:600 12px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.pg{height:5px;background:var(--line);border-radius:3px;margin:10px 0 26px}.pg i{display:block;height:100%;background:var(--blue);border-radius:3px;transition:width .4s;width:12%}
+.st{display:none}.st.on{display:block;animation:sin .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes sin{from{opacity:0;transform:translateX(22px)}}
+.st>h3{font:700 26px/1.2 Inter,sans-serif;letter-spacing:-.02em;margin-bottom:22px}
+fieldset{border:0;padding:0;min-width:0}
+.fd{display:block;margin-bottom:20px}
+.lb{display:block;font-weight:600;font-size:15px;margin-bottom:8px;padding:0}
+.op{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.op label{display:flex;gap:10px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;cursor:pointer;font-size:15px;background:#fff}
+.op label:has(input:checked){border-color:var(--blue);background:#EEF3FF}
+input[type=radio],input[type=checkbox]{accent-color:var(--blue);width:18px;height:18px}
+input[type=text],input[type=tel],input[type=email],textarea{width:100%;border:1.5px solid var(--bd);border-radius:12px;padding:12px 14px;font:400 16px Inter,sans-serif;color:var(--ink);background:#fff}
+input:focus,textarea:focus{border-color:var(--blue);outline:0;box-shadow:0 0 0 4px rgba(36,87,245,.15)}
+.er{color:#C0392B;font-weight:500;min-height:24px;margin:8px 0}
+.nv{display:flex;justify-content:space-between;gap:12px;margin-top:8px}
+.sm{display:grid;grid-template-columns:170px 1fr;gap:8px 16px;font-size:15px;background:var(--alt);border-radius:12px;padding:18px;margin-bottom:18px}
+.sm dt{color:var(--mut)}.sm dd{font-weight:500;word-break:break-word}
+.fq{display:block}
+details{border-bottom:1px solid var(--line)}details:first-child{border-top:1px solid var(--line)}
+summary{cursor:pointer;padding:20px 40px 20px 0;position:relative;list-style:none;font:600 clamp(17px,1.8vw,20px)/1.35 Inter,sans-serif}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:12px;font:400 30px Inter;color:var(--blue);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 22px;color:var(--mut);max-width:620px}
+#contact{background:var(--ink);color:#fff}
+.mega{font:800 clamp(34px,5.4vw,72px)/1.04 Inter,sans-serif;letter-spacing:-.035em;max-width:960px}.mega span,.mega em{display:block}
+#contact .at{background-image:linear-gradient(90deg,#7FA3FF,#5BD1FF)}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.ci{border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:32px;background:rgba(255,255,255,.05);display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.ci strong{font:700 clamp(24px,2.6vw,34px)/1.2 Inter,sans-serif;letter-spacing:-.02em}
+.ci p{color:#B5C3DD}.ci a{color:#fff}
+.ci .btn.ag{background:var(--blue)}
+#cf{display:grid;gap:12px;align-content:start;background:#fff;color:var(--ink);border-radius:22px;padding:28px}
+footer{background:#071229;color:#9FB0CC;padding:56px 0 0;font-size:14px;position:relative;overflow:hidden}
+.fg{display:grid;grid-template-columns:1.2fr 2fr auto;gap:32px}
+footer .lg button{background:transparent;border-color:rgba(255,255,255,.25);color:#fff}footer .lg button[aria-pressed=true]{background:#fff;color:var(--ink);border-color:#fff}
+footer ul{list-style:none;padding:0;columns:2;gap:24px}footer li{margin-bottom:8px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+.mw{font:800 clamp(64px,18vw,250px)/.85 Inter,sans-serif;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.14);text-align:center;margin-top:50px;user-select:none}
+.cp{padding:18px 0 22px}
+.fw{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;color:#06260f;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+.fw svg{width:30px;height:30px;fill:currentColor}
+.ab{position:fixed;right:18px;bottom:88px;z-index:60;width:58px;height:58px;border-radius:50%;border:0;cursor:pointer;display:grid;place-items:center;background:var(--blue);color:#fff;box-shadow:0 10px 26px rgba(36,87,245,.45)}
+.ab svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ap{position:fixed;right:18px;bottom:158px;z-index:61;width:min(370px,calc(100vw - 36px));height:min(480px,calc(100svh - 190px));display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 60px rgba(11,27,58,.3);overflow:hidden}
+.ah{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:var(--ink);color:#fff;font:600 15px Inter}
+.ah button{background:none;border:0;color:#fff;font-size:24px;cursor:pointer;line-height:1}
+.am{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:2px;background:#F6F8FC}
+.bm{max-width:86%;padding:10px 14px;border-radius:14px;margin:4px 0;font-size:14px;line-height:1.5}
+.bm.bot{background:#fff;border:1px solid var(--line);align-self:flex-start}.bm.u{background:var(--blue);color:#fff;align-self:flex-end}
+.ac,.aq{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0}
+.aq{padding:8px 14px;border-top:1px solid var(--line)}
+.ch{font:500 13px Inter;color:var(--blue);background:#EEF3FF;border:1px solid #C9D8FF;border-radius:999px;padding:6px 12px;cursor:pointer;text-decoration:none}.ch:hover{background:#DDE7FF}
+#af{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line)}
+#af input{flex:1;min-width:0;padding:10px 14px;border-radius:999px}
+#af .btn{padding:10px 16px}
+@media(max-width:1340px){
+#bg{display:block}
+nav{display:none;position:absolute;left:0;right:0;top:68px;background:#fff;padding:14px 20px 22px;border-bottom:1px solid var(--line);box-shadow:0 20px 30px -20px rgba(11,27,58,.3)}
+nav.open{display:block}nav ul{flex-direction:column;align-items:flex-start;gap:14px}
+}
+@media(max-width:900px){
+.hg,.sp,.cs,.cg,.fg,.sv{grid-template-columns:1fr}.hg{gap:36px}.sp{gap:30px}.stk{position:static}
+.pk{grid-template-columns:repeat(2,1fr)}.row{grid-template-columns:1fr;gap:8px}
+.vis{height:420px}.ph{width:210px}
+.sl{display:none}.pane{padding:20px}.sm{grid-template-columns:1fr;gap:2px}.sm dd{margin-bottom:10px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bf,.pu{animation:fo .6s ease-out var(--d) forwards}.rv{opacity:1;filter:none;transform:none;transition:none}.big span{opacity:1}.st.on{animation:none}.bw,.ph,.aic{animation:none}*{transition:none!important}}
+/* ===== dark navy theme (overrides) ===== */
+:root{--ink:#E8EEFA;--bg:#0A1224;--bg2:#0E1830;--card:#111F3C;--line:rgba(255,255,255,.1);--mut:#9FB0CC;--bd:rgba(255,255,255,.22);--blue:#3B82F6;--blue2:#2F6FDB;color-scheme:dark}
+html,body{background:var(--bg);color:var(--ink)}
+::placeholder{color:#7889A6}
+header{background:rgba(10,18,36,.85)}
+nav a{color:#B9C6DD}nav a:hover{color:#fff}nav .btn,nav .btn:hover{color:#fff}
+.lg button{background:transparent;color:#fff;border-color:rgba(255,255,255,.25)}
+.lg button[aria-pressed=true],footer .lg button[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+#bg{background:transparent;color:#fff;border-color:rgba(255,255,255,.25)}
+.btn.g,.lq{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28)}
+.btn.g:hover,.lq:hover{background:rgba(255,255,255,.07);color:#fff;box-shadow:inset 0 0 0 1.5px #7FB0FF}
+.btn.wa:hover{color:#06260f}
+.hero{background:linear-gradient(180deg,#0E1830,var(--bg))}
+.hero::before{background:radial-gradient(rgba(96,165,250,.2) 1px,transparent 1.3px) 0 0/24px 24px}
+.ey{background:rgba(59,130,246,.16);color:#9CC1FF}
+.hero h1,h2,.big,.cd h3,.pb b,summary,.st>h3,#hw h3,.row h3{color:#fff}
+.at,#contact .at{background-image:linear-gradient(90deg,#60A5FA,#22D3EE)}
+.hero p,.lead{color:var(--mut)}
+.mr{color:#B9C6DD}.mr svg{color:#60A5FA}
+.bw,.ph{background:var(--card);border-color:rgba(255,255,255,.12);box-shadow:0 30px 60px -22px rgba(0,0,0,.7)}
+.bt{background:var(--bg2);border-color:var(--line)}.bt b{background:rgba(255,255,255,.2)}
+.bt span{background:var(--bg);border-color:var(--line);color:var(--mut)}
+.bl{background:rgba(255,255,255,.1)}.b3 i{background:rgba(255,255,255,.05);border-color:var(--line)}
+.pm{background:var(--bg2)}.mg.l{background:#172848;border-color:var(--line);color:var(--ink)}
+.aic{background:#0A1224;border:1px solid rgba(255,255,255,.18)}
+#services,#types,#order{background:var(--bg2)}
+.row:hover h3,.sv .btn:hover{color:#7FB0FF}
+.cd{background:radial-gradient(280px circle at var(--x) var(--y),rgba(59,130,246,.16),transparent 65%),var(--card);border-color:var(--line);box-shadow:none}
+.tic,.pb svg{stroke:#60A5FA}
+.sv li{color:#C5D1E6}.sv li::before{background:#16305F;border-color:#60A5FA}
+.tw::before{background:rgba(255,255,255,.12)}.fl{background:var(--blue)}
+#hw li::before{background:var(--bg);border-color:rgba(255,255,255,.28)}
+#hw li.on::before{background:var(--blue);border-color:var(--blue);box-shadow:0 0 0 5px rgba(59,130,246,.25)}
+.pb{background:var(--card);border-color:var(--line)}.pb:hover{border-color:#5B8DEF}
+.pb[aria-pressed=true]{background:rgba(59,130,246,.18);border-color:var(--blue);box-shadow:0 10px 30px -12px rgba(59,130,246,.6)}
+.cs{background:var(--card);border-color:var(--line);box-shadow:0 24px 60px -30px rgba(0,0,0,.7)}
+.sl{background:rgba(0,0,0,.22);border-color:var(--line)}
+#stl button{color:#7889A6}#stl li.on button{color:#fff;background:rgba(59,130,246,.2)}#stl li.dn button{color:#7FB0FF}
+.pg{background:rgba(255,255,255,.1)}
+.op label{background:rgba(255,255,255,.03);border-color:var(--line)}
+.op label:has(input:checked){background:rgba(59,130,246,.16);border-color:var(--blue)}
+input[type=text],input[type=tel],input[type=email],textarea{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.18);color:#fff}
+input:focus,textarea:focus{box-shadow:0 0 0 4px rgba(59,130,246,.25)}
+.er{color:#FF8A80}.sm{background:rgba(255,255,255,.05)}
+summary::after{color:#7FB0FF}
+#contact{background:radial-gradient(80% 60% at 50% 0%,rgba(59,130,246,.22),transparent 65%),var(--bg);color:#fff}
+#cf{background:var(--card);border:1px solid var(--line);color:var(--ink)}
+footer{background:#060C1A}.mw{-webkit-text-stroke-color:rgba(255,255,255,.12)}
+.ap{background:var(--bg2);border-color:var(--line);box-shadow:0 24px 60px rgba(0,0,0,.6)}
+.ah{background:var(--card)}.am{background:var(--bg)}
+.bm.bot{background:#172848;border-color:var(--line);color:var(--ink)}
+.aq,#af{border-color:var(--line)}
+.ch{background:rgba(59,130,246,.16);color:#9CC1FF;border-color:rgba(59,130,246,.4)}.ch:hover{background:rgba(59,130,246,.3)}
+@media(max-width:1340px){nav{background:var(--bg);border-color:var(--line);box-shadow:0 20px 30px -20px rgba(0,0,0,.7)}}
+</style>
+</head>
+<body>
+<div id="sp"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41z"/></symbol></svg>
+
+<header>
+<div class="w hb">
+<a class="logo" href="#home" aria-label="MUBIX TJ">MUBIX<i>TJ</i></a>
+<nav id="nv" aria-label="Main">
+<ul>
+<li><a href="#home" data-t="Асосӣ|Главная|Home"></a></li>
+<li><a href="#services" data-t="Хизматҳо|Услуги|Services"></a></li>
+<li><a href="#about" data-t="Дар бораи вебсайт|О сайтах|About Websites"></a></li>
+<li><a href="#benefits" data-t="Манфиати тиҷорат|Выгода для бизнеса|Business Benefits"></a></li>
+<li><a href="#types" data-t="Намудҳои сайт|Виды сайтов|Website Types"></a></li>
+<li><a href="#how" data-t="Чӣ тавр кор мекунем|Как мы работаем|How We Work"></a></li>
+<li><a href="#faq" data-t="Саволҳо|Вопросы|FAQ"></a></li>
+<li><a href="#contact" data-t="Тамос|Контакты|Contact"></a></li>
+<li><a class="btn ag" href="#order" data-t="Фармоиш|Заказать|Order"></a></li>
+</ul>
+</nav>
+<div class="lg" role="group" aria-label="Language"><button data-l="tg">TJ</button><button data-l="ru">RU</button><button data-l="en">EN</button></div>
+<button id="bg" aria-label="Menu" aria-expanded="false" aria-controls="nv">☰</button>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="w hg">
+<div>
+<div class="ey bf" style="--d:.1s" data-t="Вебсайт · Telegram-бот · AI-админ|Сайты · Telegram-боты · AI-админ|Websites · Telegram bots · AI admin"></div>
+<h1 class="bf" style="--d:.2s"><span data-t="Вебсайт, бот ва AI-админ —|Сайт, бот и AI-админ —|A website, a bot and an AI admin —"></span><em class="at" data-t="барои тиҷорати шумо.|для вашего бизнеса.|for your business."></em></h1>
+<p class="bf" style="--d:.3s" data-t="MUBIX TJ вебсайт, Telegram-бот ва AI-админ месозад, то муштариён шуморо зуд ёбанд ва фармоиш диҳанд. Анкетаро пур кунед ва фармоиш тавассути WhatsApp ба мо мерасад.|MUBIX TJ создаёт сайты, Telegram-боты и AI-админов, чтобы клиенты быстро находили вас и делали заказы. Заполните анкету — заказ придёт нам в WhatsApp.|MUBIX TJ builds websites, Telegram bots and AI admins so customers can find you fast and order. Fill in the form and your order reaches us on WhatsApp."></p>
+<div class="ba">
+<a class="btn pu" style="--d:.4s" href="#order"><span data-t="Фармоиш додан|Сделать заказ|Place an order"></span><svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+<a class="btn g bf" style="--d:.5s" href="#services"><span data-t="Хизматҳои мо|Наши услуги|Our services"></span></a>
+</div>
+<div class="mr bf" style="--d:.6s">
+<span><svg class="ic" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/></svg><b data-t="Вебсайт|Сайт|Website" style="font-weight:500"></b></span>
+<span><svg class="ic" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4Z"/></svg><b data-t="Telegram-бот|Telegram-бот|Telegram bot" style="font-weight:500"></b></span>
+<span><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/></svg><b data-t="AI-админ|AI-админ|AI admin" style="font-weight:500"></b></span>
+</div>
+</div>
+<div class="vis bf" style="--d:.35s" aria-hidden="true">
+<div class="bw"><div class="bt"><b></b><b></b><b></b><span>yourbusiness.com</span></div>
+<div class="bb"><div class="bh"><i></i><i></i><i></i></div><div class="bl" style="width:70%"></div><div class="bl" style="width:48%"></div><div class="b3"><i></i><i></i><i></i></div></div></div>
+<div class="ph"><div class="pt">Telegram-бот</div>
+<div class="pm"><div class="mg l" data-t="Салом! Чӣ кумак карда метавонам?|Здравствуйте! Чем могу помочь?|Hello! How can I help?"></div><div class="mg r" data-t="Мехоҳам фармоиш диҳам|Хочу сделать заказ|I want to place an order"></div><div class="mg l" data-t="Хуб! Якҷоя анкетаро пур мекунем.|Отлично! Давайте заполним анкету.|Great! Let us fill in the form."></div></div></div>
+<div class="aic"><i></i><span data-t="AI-админ · онлайн|AI-админ · онлайн|AI admin · online"></span></div>
+</div>
+</div>
+</section>
+
+<section class="s" id="services"><div class="w">
+<h2 class="rv" data-t="Мо барои тиҷорати шумо месозем|Мы создаём для вашего бизнеса|What we build for your business"></h2>
+<p class="lead rv" data-t="Се хизмат: ҳар кадомро алоҳида ё якҷоя фармоиш диҳед.|Три услуги: заказывайте по отдельности или вместе.|Three services: order each one separately or together."></p>
+<div class="sv" id="sv"></div>
+</div></section>
+<section class="s" id="about"><div class="w">
+<h2 class="rv" data-t="Вебсайт чист?|Что такое сайт?|What is a website?"></h2>
+<p class="big" id="rv" data-t="Вебсайт — саҳифаи шумо дар интернет. Дар он муштариён хизматҳо, маҳсулот, нарх ва тамоси шуморо мебинанд ва метавонанд дар ҳар вақт аз телефон ё компютер бо шумо робита кунанд.|Сайт — это ваша страница в интернете. Клиенты видят на ней услуги, товары, цены и контакты и могут связаться с вами в любое время с телефона или компьютера.|A website is your page on the internet. Customers see your services, products, prices and contacts, and can reach you at any time from a phone or computer."></p>
+</div></section>
+
+<section class="s" id="benefits"><div class="w">
+<h2 class="rv" data-t="Сайт ба тиҷорати шумо чӣ медиҳад|Что сайт даёт вашему бизнесу|What a website gives your business"></h2>
+<div id="bn" style="margin-top:44px"></div>
+</div></section>
+
+<section class="s" id="types"><div class="w">
+<div class="hd"><h2 class="rv" data-t="Кадом сайт ба шумо лозим аст?|Какой сайт вам нужен?|Which website do you need?"></h2>
+<div class="ar"><button type="button" class="lq" id="r1" aria-label="Prev">←</button><button type="button" class="lq" id="r2" aria-label="Next">→</button></div></div>
+<div class="rail" id="ty"></div>
+</div></section>
+
+<section class="s" id="how"><div class="w sp">
+<div class="stk"><h2 class="rv" data-t="Чӣ тавр кор мекунем|Как мы работаем|How we work"></h2><p class="lead" data-t="Чор қадам аз анкета то нашр.|Четыре шага от анкеты до запуска.|Four steps from the form to launch."></p></div>
+<div class="tw"><i class="fl" id="fl"></i><ol id="hw"></ol></div>
+</div></section>
+
+<section class="s" id="order"><div class="w">
+<h2 class="rv" data-t="Чӣ фармоиш медиҳед?|Что вы хотите заказать?|What do you want to order?"></h2>
+<p class="lead rv" data-t="Яке аз хизматҳоро интихоб кунед, баъд анкета оғоз мешавад.|Выберите услугу — после этого начнётся анкета.|Choose a service and the form will start."></p>
+<div class="pk" id="pk"></div>
+<div class="cs" id="cs" hidden>
+<aside class="sl"><ul id="stl"></ul></aside>
+<div class="pane">
+<div class="pn"><span data-t="Қадам|Шаг|Step"></span> <b id="sn" style="font-weight:500">1 / 8</b></div>
+<div class="pg"><i id="pb"></i></div>
+<form id="fm" novalidate></form>
+<p class="er" id="er" role="alert"></p>
+<div class="nv"><button type="button" class="btn g" id="bk" data-t="Бозгашт|Назад|Back"></button><button type="button" class="btn" id="nx" data-t="Идома|Далее|Next"></button></div>
+</div>
+</div>
+</div></section>
+
+<section class="s" id="faq"><div class="w sp">
+<div class="stk"><h2 class="rv" data-t="Саволҳои зуд-зуд|Частые вопросы|Frequently asked questions"></h2></div>
+<div class="fq" id="fq"></div>
+</div></section>
+
+<section class="s" id="contact"><div class="w">
+<h2 class="mega rv"><span data-t="Бигӯед, чӣ лозим аст —|Расскажите, что вам нужно —|Tell us what you need —"></span><em class="at" data-t="ҷавоб медиҳем.|мы ответим.|we will reply."></em></h2>
+<div class="cg">
+<div class="ci rv">
+<div><p data-t="Саволе доред? Дар WhatsApp нависед — ҷавоб медиҳем.|Есть вопрос? Напишите в WhatsApp — ответим.|Have a question? Write on WhatsApp and we will reply."></p></div>
+<div><strong>MUBIX TJ<br>+992 71 457 7575</strong><p id="em" hidden style="margin-top:12px">Email: <a id="ea"></a></p></div>
+<a class="btn ag big" href="https://wa.me/992714577575" target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg><span data-t="Навиштан дар WhatsApp|Написать в WhatsApp|Chat on WhatsApp"></span></a>
+<a class="btn lq big" id="tgb" target="_blank" rel="noopener" hidden><svg class="ic" viewBox="0 0 24 24" style="width:18px;height:18px"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4Z"/></svg><span data-t="Навиштан дар Telegram|Написать в Telegram|Chat on Telegram"></span></a>
+</div>
+<form id="cf" class="rv" novalidate>
+<label class="fd"><span class="lb" data-t="Ному насаб|Имя и фамилия|Full name"></span><input type="text" name="n" autocomplete="name"></label>
+<label class="fd"><span class="lb" data-t="Рақами телефон|Номер телефона|Phone number"></span><input type="tel" name="p" inputmode="tel" autocomplete="tel"></label>
+<label class="fd"><span class="lb" data-t="Паём|Сообщение|Message"></span><textarea name="m" rows="4"></textarea></label>
+<p class="er" id="ce" role="alert"></p>
+<button class="btn wa" type="submit"><svg class="i"><use href="#wa"/></svg><span data-t="Фиристодан ба WhatsApp|Отправить в WhatsApp|Send to WhatsApp"></span></button>
+</form>
+</div>
+</div></section>
+</main>
+
+<footer>
+<div class="w">
+<div class="fg">
+<div><a class="logo" href="#home" style="color:#fff">MUBIX<i>TJ</i></a><p style="margin-top:12px">WhatsApp: +992 71 457 7575</p></div>
+<ul>
+<li><a href="#home" data-t="Асосӣ|Главная|Home"></a></li>
+<li><a href="#services" data-t="Хизматҳо|Услуги|Services"></a></li>
+<li><a href="#about" data-t="Дар бораи вебсайт|О сайтах|About Websites"></a></li>
+<li><a href="#benefits" data-t="Манфиати тиҷорат|Выгода для бизнеса|Business Benefits"></a></li>
+<li><a href="#types" data-t="Намудҳои сайт|Виды сайтов|Website Types"></a></li>
+<li><a href="#how" data-t="Чӣ тавр кор мекунем|Как мы работаем|How We Work"></a></li>
+<li><a href="#order" data-t="Фармоиш додан|Сделать заказ|Place an order"></a></li>
+<li><a href="#faq" data-t="Саволҳо|Вопросы|FAQ"></a></li>
+<li><a href="#contact" data-t="Тамос|Контакты|Contact"></a></li>
+</ul>
+<div class="lg" role="group" aria-label="Language"><button data-l="tg">TJ</button><button data-l="ru">RU</button><button data-l="en">EN</button></div>
+</div>
+<div class="mw" aria-hidden="true">MUBIX TJ</div>
+<p class="cp">© <span id="yr"></span> MUBIX TJ. <span data-t="Ҳамаи ҳуқуқҳо ҳифз шудаанд.|Все права защищены.|All rights reserved."></span></p>
+</div>
+</footer>
+
+<button type="button" class="ab" id="ab" aria-label="Chat" aria-expanded="false" aria-controls="ap"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></button>
+<div class="ap" id="ap" role="dialog" aria-label="Chat" hidden>
+<div class="ah"><span data-t="Ёрдамчии автоматӣ|Автоматический помощник|Automatic assistant"></span><button type="button" id="ax" aria-label="Close">×</button></div>
+<div class="am" id="am" aria-live="polite"></div>
+<div class="aq" id="aq"></div>
+<form id="af"><input id="ai" type="text" autocomplete="off" data-p="Саволро нависед|Напишите вопрос|Type your question" aria-label="Question"><button class="btn" type="submit" aria-label="Send">→</button></form>
+</div>
+<a class="fw" href="https://wa.me/992714577575" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+const $=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)],LN=['tg','ru','en'],WA='992714577575',EMAIL='';
+let lang='tg',cur=0;try{lang=localStorage.getItem('mb')||'tg'}catch(e){}
+const P=s=>s.split('|')[LN.indexOf(lang)]||s.split('|')[0],D=s=>`data-t="${s}"`,esc=s=>s.replace(/[&<>"]/g,c=>'&#'+c.charCodeAt(0)+';');
+const Y='Бале|Да|Yes',N='Не|Нет|No';
+const E1='Майдонҳои ҳатмиро пур кунед.|Заполните обязательные поля.|Please fill in the required fields.',E2='Рақами телефонро дуруст ворид кунед.|Введите корректный номер телефона.|Enter a valid phone number.',E3='Email нодуруст аст.|Некорректный email.|The email is not valid.';
+const BN=[['Кушода шабонарӯз|Работает круглосуточно|Open around the clock','Муштариён ҳар вақт маълумот мегиранд, ҳатто вақте ки шумо банд ҳастед.|Клиенты получают информацию в любое время, даже когда вы заняты.|Customers get information at any hour, even when you are busy.'],
+['Боварии бештар|Больше доверия|More trust','Тиҷорат бо сайти худ ҷиддитар ва боэътимодтар ба назар мерасад.|Бизнес со своим сайтом выглядит серьёзнее и надёжнее.|A business with its own site looks more serious and reliable.'],
+['Тамоси осон|Простая связь|Easy contact','WhatsApp, харита ва телефон дар як ҷо — муштарӣ зуд пайдо мекунад.|WhatsApp, карта и телефон в одном месте — клиент быстро вас находит.|WhatsApp, map and phone in one place, so customers find you fast.'],
+['Фурӯш ва фармоиш|Продажи и заказы|Sales and orders','Маҳсулотро нишон диҳед ва фармоиш қабул кунед.|Показывайте товары и принимайте заказы.|Show your products and take orders.']];
+const TY=[['Сайти тиҷоратӣ|Сайт компании|Business website','Дар бораи ширкат, хизматҳо ва тамос.|О компании, услугах и контактах.|Your company, services and contacts.'],
+['Мағозаи онлайн|Интернет-магазин|Online store','Каталог, нарх ва қабули фармоиш.|Каталог, цены и приём заказов.|Catalog, prices and order taking.'],
+['Сайти тарабхона|Сайт ресторана|Restaurant website','Меню, суратҳо ва бронкунии миз.|Меню, фото и бронирование столов.|Menu, photos and table booking.'],
+['Портфолио|Портфолио|Portfolio','Корҳои шумо дар як саҳифа.|Ваши работы на одной странице.|Your work on one page.'],
+['Дигар|Другое|Other','Ғояи худро тавсиф кунед — мо мусоидат мекунем.|Опишите свою идею — мы поможем.|Describe your idea and we will help.']];
+const HW=[['Анкета|Анкета|Order form','Шумо анкетаро пур карда, фармоишро тавассути WhatsApp мефиристед.|Вы заполняете анкету и отправляете заказ через WhatsApp.|You fill in the form and send the order via WhatsApp.'],
+['Муҳокима|Обсуждение|Discussion','Мо бо шумо тамос гирифта, талабот ва шартҳоро аниқ мекунем.|Мы связываемся с вами и уточняем требования и условия.|We contact you and clarify requirements and terms.'],
+['Сохтан|Разработка|Development','Сайтро аз рӯи хоҳиши шумо месозем ва барои санҷиш нишон медиҳем.|Делаем сайт по вашим пожеланиям и показываем на проверку.|We build the site to your wishes and show it for review.'],
+['Нашр|Запуск|Launch','Пас аз тасдиқи шумо сайтро ба интернет мегузорем.|После вашего одобрения публикуем сайт в интернете.|After your approval we publish the site online.']];
+const FQ=[['Вебсайт чист?|Что такое сайт?|What is a website?','Саҳифаи шумо дар интернет, ки маълумот дар бораи тиҷорати шуморо нишон медиҳад.|Ваша страница в интернете с информацией о вашем бизнесе.|Your page on the internet that presents your business.'],
+['Нархи вебсайт чӣ қадар аст?|Сколько стоит сайт?|How much does a website cost?','Нарх аз намуд, шумораи саҳифаҳо ва имкониятҳо вобаста аст. Пас аз анкета нархро якҷоя муайян мекунем.|Цена зависит от типа, числа страниц и функций. После анкеты определим стоимость вместе.|The price depends on the type, number of pages and features. After the form we will agree on the cost together.'],
+['Тайёр шудан чӣ қадар вақт мегирад?|Сколько занимает разработка?|How long does development take?','Мӯҳлат ба ҳаҷми кор вобаста аст. Онро пас аз муҳокимаи талабот ба шумо мегӯем.|Срок зависит от объёма работы. Назовём его после обсуждения требований.|It depends on the scope of work. We will tell you after discussing your requirements.'],
+['Тарҳро худам интихоб карда метавонам?|Можно выбрать свой дизайн?|Can I choose my own design?','Бале. Рангҳо, услуб ва сайти намунаро дар анкета нишон диҳед.|Да. Укажите цвета, стиль и сайт-пример в анкете.|Yes. Name your colors, style and a reference site in the form.'],
+['Сайт дар смартфон кор мекунад?|Сайт будет работать на смартфонах?|Will it work on smartphones?','Бале, сайтҳо барои телефон, планшет ва компютер мутобиқ карда мешаванд.|Да, сайты адаптируются под телефон, планшет и компьютер.|Yes, sites are adapted for phone, tablet and computer.'],
+['Баъдан сайтро нав карда метавонам?|Можно ли потом обновлять сайт?|Can I update my website later?','Бале. Тағйирот ва иловаҳоро баъдтар низ дархост карда метавонед.|Да. Изменения и дополнения можно заказать и позже.|Yes. You can request changes and additions later too.'],
+['Домен лозим аст?|Нужен ли домен?|Do I need a domain?','Домен — суроғаи сайт (масалан, yourbusiness.com). Агар надоред, ҳангоми муҳокима дар интихоб кумак мекунем.|Домен — адрес сайта (например, yourbusiness.com). Если его нет, поможем с выбором.|A domain is the address of your site (like yourbusiness.com). If you have none, we will help you choose.'],
+['Хостинг лозим аст?|Нужен ли хостинг?|Do I need hosting?','Бале, барои кор дар интернет сайт ҷойи нигаҳдорӣ — хостинг мехоҳад. Вариантро якҷоя интихоб мекунем.|Да, сайту нужно место в интернете — хостинг. Вариант выберем вместе.|Yes, a site needs a place to live online, called hosting. We will choose an option together.'],
+['Чӣ тавр вебсайт фармоиш диҳам?|Как заказать сайт?|How can I order a website?','Анкетаро дар ин саҳифа пур кунед ва тугмаи WhatsApp-ро пахш кунед.|Заполните анкету на этой странице и нажмите кнопку WhatsApp.|Fill in the form on this page and press the WhatsApp button.'],
+['Telegram-бот чист?|Что такое Telegram-бот?|What is a Telegram bot?','Бот — барномаест дар Telegram, ки худаш ба муштариён ҷавоб медиҳад: фармоиш қабул мекунад, ба саволҳо ҷавоб медиҳад ва ба шумо хабар мефиристад.|Бот — это программа в Telegram, которая сама отвечает клиентам: принимает заказы, отвечает на вопросы и присылает вам уведомления.|A bot is a program in Telegram that talks to customers by itself: it takes orders, answers questions and notifies you.'],
+['AI-админ чист?|Что такое AI-админ?|What is an AI admin?','AI-админ — ёрдамчии ҳушманд, ки бо муштариён бо забони оддӣ гап мезанад, ба саволҳо дар бораи тиҷорати шумо ҷавоб медиҳад ва онҳоро ба фармоиш мебарад. Он метавонад дар сайт ё дар Telegram кор кунад.|AI-админ — это умный помощник, который общается с клиентами простым языком, отвечает на вопросы о вашем бизнесе и ведёт их к заказу. Он может работать на сайте или в Telegram.|An AI admin is a smart assistant that talks to customers in plain language, answers questions about your business and guides them to an order. It can work on a website or in Telegram.']];
+const FT=['Саҳифаи асосӣ|Главная страница|Home page','Дар бораи мо|О нас|About us','Маҳсулот|Товары|Products','Хизматҳо|Услуги|Services','Нархҳо|Цены|Prices','Галереяи маҳсулот|Галерея товаров|Product gallery','Саҳифаи тамос|Страница контактов|Contact page','Харитаи Google|Google Карты|Google Maps','Тугмаи WhatsApp|Кнопка WhatsApp|WhatsApp button','Фармоиши онлайн|Онлайн-заказ|Online ordering','Назарҳои муштариён|Отзывы клиентов|Customer reviews'];
+const yn=(id,l)=>({id,l,k:'r',o:[Y,N]});
+const ST=[
+['Забон|Язык|Language',[{id:'lang',l:'Забони фармоиш ва паёми WhatsApp|Язык заказа и сообщения WhatsApp|Language of the order and WhatsApp message',k:'r',o:['Тоҷикӣ','Русский','English']},{id:'service',l:'Хизмат|Услуга|Service',k:'h',r:1}]],
+['Намуди вебсайт|Тип сайта|Website type',[{id:'type',l:'Кадом намуди сайт лозим аст?|Какой тип сайта нужен?|Which type of website do you need?',k:'r',o:TY.map(x=>x[0]),r:1}]],
+['Имкониятҳо|Функции сайта|Website features',[{id:'feat',l:'Имкониятҳои вебсайт (якчанд интихоб мумкин аст)|Функции сайта (можно несколько)|Website features (you can select several)',k:'c',o:FT,r:1}]],
+['Тарроҳӣ|Дизайн|Design',[{id:'colors',l:'Кадом рангҳоро дӯст медоред?|Какие цвета вам нравятся?|What colors do you prefer?',k:'t'},{id:'style',l:'Кадом услуб?|Какой стиль?|Which style do you like?',k:'r',o:['Минималистӣ|Минимализм|Minimalist','Муосир|Современный|Modern','Боҳашамат|Премиум|Luxury','Корпоративӣ|Корпоративный|Corporate']},{id:'ref',l:'Сайти намуна (истинод)|Сайт-пример (ссылка)|Reference website (link)',k:'t'}]],
+['Маводи сайт|Материалы|Content',[yn('logo','Логотип доред?|Есть логотип?|Do you have a logo?'),yn('photos','Акси маҳсулот доред?|Есть фото товаров?|Do you have product photos?'),yn('desc','Тавсифи маҳсулот ё хизматҳо доред?|Есть описания товаров или услуг?|Do you have descriptions?'),yn('domain','Домен доред?|Есть домен?|Do you have a domain?'),yn('hosting','Хостинг доред?|Есть хостинг?|Do you have hosting?')]],
+['Маълумоти иловагӣ|Дополнительно|Additional information',[{id:'days',l:'Фармоиш ба шумо дар чанд рӯз лозим аст?|Через сколько дней вам нужен заказ?|In how many days do you need the order?',k:'t'},{id:'extra',l:'Дақиқ нависед, ки чӣ гуна сайт мехоҳед|Опишите подробно, какой сайт вам нужен|Describe exactly what kind of website you want',k:'a'}]],
+['Маълумоти тамос|Ваши контакты|Your contact details',[{id:'name',l:'Ному насаб|Имя и фамилия|Full name',k:'t',r:1},{id:'phone',l:'Рақами телефон|Номер телефона|Phone number',k:'tel',r:1},{id:'email',l:'Email (ихтиёрӣ)|Email (по желанию)|Email (optional)',k:'email'},{id:'cm',l:'Усули дилхоҳи тамос|Предпочитаемый способ связи|Preferred contact method',k:'r',r:1,o:['WhatsApp','Telegram','Занг|Звонок|Phone call','Email']}]],
+['Тасдиқ|Проверка заказа|Order summary',[]]];
+
+const IC=['<path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2M10 6h4M10 10h4M10 14h4M10 18h4"/>','<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4ZM3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>','<path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>','<rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/>','<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/>'];
+$('#bn').innerHTML=BN.map(([a,b],i)=>`<div class="row rv" style="--d:${i*.08}s"><h3 ${D(a)}></h3><p ${D(b)}></p></div>`).join('');
+$('#ty').innerHTML=TY.map(([a,b],i)=>`<article class="cd"><svg class="tic" viewBox="0 0 24 24">${IC[i]}</svg><h3 ${D(a)}></h3><p ${D(b)}></p><button type="button" class="btn lq" data-i="${i}"><span ${D('Интихоб кардан|Выбрать|Choose')}></span></button></article>`).join('');
+$('#hw').innerHTML=HW.map(([a,b])=>`<li><h3 ${D(a)}></h3><p ${D(b)}></p></li>`).join('');
+$('#fq').innerHTML=FQ.map(([a,b],i)=>`<details class="rv" style="--d:${i*.05}s"><summary ${D(a)}></summary><p ${D(b)}></p></details>`).join('');
+
+function fld(f){if(f.k=='h')return`<input type="hidden" name="${f.id}">`;const g=f.k=='r'||f.k=='c';
+if(g)return`<fieldset class="fd"><legend class="lb" ${D(f.l)}></legend><div class="op">`+f.o.map((o,i)=>`<label><input type="${f.k=='r'?'radio':'checkbox'}" name="${f.id}" value="${f.id=='lang'?LN[i]:o}"><span ${D(o)}></span></label>`).join('')+'</div></fieldset>';
+const inp=f.k=='a'?`<textarea name="${f.id}" rows="6"></textarea>`:`<input name="${f.id}" type="${f.k=='t'?'text':f.k}"${f.k=='tel'?' inputmode="tel" autocomplete="tel"':''}${f.id=='name'?' autocomplete="name"':''}>`;
+return`<label class="fd"><span class="lb" ${D(f.l)}></span>${inp}</label>`}
+ST.forEach((s,i)=>{const e=document.createElement('section');e.className='st';e.innerHTML=`<h3 ${D(s[0])}></h3>`+s[1].map(fld).join('')+(i==7?`<dl class="sm" id="sm"></dl><p style="margin-bottom:16px;color:var(--mut)" ${D('Маълумотро санҷед ва тугмаро пахш кунед. WhatsApp бо паёми омода кушода мешавад — шумо онро худатон мефиристед.|Проверьте данные и нажмите кнопку. WhatsApp откроется с готовым сообщением — вы отправляете его сами.|Review your details and press the button. WhatsApp opens with the message ready; you send it yourself.')}></p><a class="btn wa big" id="wab" target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg><span ${D('ФИРИСТОДАНИ ФАРМОИШ ТАВАССУТИ WHATSAPP|ОТПРАВИТЬ ЗАКАЗ В WHATSAPP|SEND ORDER VIA WHATSAPP')}></span></a>`:'');$('#fm').append(e)});
+
+function data(){const d={};$$('#fm [name]').forEach(e=>{if(e.type=='radio'){if(e.checked)d[e.name]=e.value}else if(e.type=='checkbox'){if(e.checked)(d[e.name]=d[e.name]||[]).push(e.value)}else d[e.name]=e.value.trim()});d.lang=lang;return d}
+function rows(d){const r=[];ST.forEach(s=>s[1].forEach(f=>{let v=d[f.id];if(!v||!v.length)return;v=Array.isArray(v)?v.map(P).join(', '):f.id=='lang'?f.o[LN.indexOf(v)]:(f.k=='r'||f.k=='h')?P(v):v;r.push([P(f.l),v])}));return r}
+function msg(){const H=['Фармоиши нав — MUBIX TJ','Новый заказ — MUBIX TJ','New order — MUBIX TJ'][LN.indexOf(lang)];return H+'\n\n'+rows(data()).map(a=>'*'+a[0]+':* '+a[1]).join('\n')}
+const wl=t=>'https://wa.me/'+WA+'?text='+encodeURIComponent(t);
+function sum(){$('#sm').innerHTML=rows(data()).map(a=>`<dt>${esc(a[0])}</dt><dd>${esc(a[1])}</dd>`).join('');$('#wab').href=wl(msg())}
+$('#wab').onclick=()=>{$('#wab').href=wl(msg())};
+
+function ok(i){const d=data();let m='';
+for(const f of ST[i][1]){const v=d[f.id];
+if(f.r&&(!v||!v.length)){m=E1;break}
+if(f.k=='tel'&&v.replace(/\D/g,'').length<7){m=E2;break}
+if(f.k=='email'&&v&&!/^\S+@\S+\.\S+$/.test(v)){m=E3;break}}
+$('#er').dataset.t=m;$('#er').textContent=m?P(m):'';return!m}
+const web=()=>/^(Вебсайт|Ҳама)/.test(data().service||''),on=j=>j<1||j>3||web(),act=()=>ST.map((_,k)=>k).filter(on),nxt=(i,d)=>{let j=i+d;while(j>0&&j<7&&!on(j))j+=d;return j};
+function go(i,sc){cur=i;const A=act(),n=A.indexOf(i)+1;$$('.st').forEach((e,j)=>e.classList.toggle('on',j==i));$('#pb').style.width=n/A.length*100+'%';$('#sn').textContent=n+' / '+A.length;$('#bk').style.visibility=i?'visible':'hidden';$('#nx').style.display=i==7?'none':'';$('#er').textContent='';$('#er').dataset.t='';$$('#stl li').forEach((e,j)=>{e.hidden=!on(j);e.classList.toggle('on',j==i);e.classList.toggle('dn',j<i)});if(i==7)sum();if(sc)$('#cs').scrollIntoView()}
+$('#nx').onclick=()=>{if(ok(cur))go(nxt(cur,1),1)};
+$('#bk').onclick=()=>go(nxt(cur,-1),1);
+$('#fm').addEventListener('keydown',e=>{if(e.key=='Enter'&&e.target.tagName!='TEXTAREA'){e.preventDefault();if(cur<7&&ok(cur))go(nxt(cur,1),1)}});
+$('#fm').addEventListener('change',e=>{if(e.target.name=='lang')setLang(e.target.value)});
+
+function applyLang(){document.documentElement.lang=lang;document.title=P('MUBIX TJ — Вебсайт, Telegram-бот, AI-админ|MUBIX TJ — Сайты, Telegram-боты, AI-админ|MUBIX TJ — Websites, Telegram bots, AI admin');
+$$('[data-t]').forEach(e=>e.textContent=P(e.dataset.t));
+$$('.lg button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l==lang));
+const r=$(`input[name=lang][value=${lang}]`);if(r)r.checked=true;if(cur==7)sum();rvS();aiReset()}
+function setLang(l){lang=l;try{localStorage.setItem('mb',l)}catch(e){}applyLang()}
+$$('.lg button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+
+$('#bg').onclick=()=>{const o=$('#nv').classList.toggle('open');$('#bg').setAttribute('aria-expanded',o)};
+$$('#nv a').forEach(a=>a.onclick=()=>{$('#nv').classList.remove('open');$('#bg').setAttribute('aria-expanded',false)});
+
+$('#cf').onsubmit=e=>{e.preventDefault();const f=e.target,n=f.n.value.trim(),p=f.p.value.trim(),m=f.m.value.trim(),er=$('#ce');
+if(!n||p.replace(/\D/g,'').length<7){er.dataset.t=E1;er.textContent=P(E1);return}
+er.dataset.t='';er.textContent='';
+const t='MUBIX TJ\n*'+P('Ному насаб|Имя и фамилия|Full name')+':* '+n+'\n*'+P('Рақами телефон|Номер телефона|Phone number')+':* '+p+(m?'\n*'+P('Паём|Сообщение|Message')+':* '+m:'');
+window.open(wl(t),'_blank','noopener')};
+
+if(EMAIL){$('#em').hidden=false;$('#ea').textContent=EMAIL;$('#ea').href='mailto:'+EMAIL}
+$('#yr').textContent=new Date().getFullYear();
+const SI=['<rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/>','<path d="M22 2 11 13M22 2l-7 20-4-9-9-4Z"/>','<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9Z"/><path d="M19 15l.7 1.8L21.5 17.5l-1.8.7L19 20l-.7-1.8-1.8-.7 1.8-.7Z"/>'];
+const SV=[['Вебсайт|Сайт|Website','Саҳифаи расмии тиҷорати шумо дар интернет, ки муштариён онро дар ҳар вақт мебинанд.|Официальная страница вашего бизнеса в интернете, которую клиенты видят в любое время.|The official page of your business online, which customers can see at any time.',['Хизматҳо, нарх ва тамос дар як ҷо|Услуги, цены и контакты в одном месте|Services, prices and contacts in one place','Кушодан аз телефон ва компютер|Открывается с телефона и компьютера|Opens on phone and computer','Харита ва тугмаи WhatsApp|Карта и кнопка WhatsApp|Map and WhatsApp button']],
+['Telegram-бот|Telegram-бот|Telegram bot','Барномае дар Telegram, ки худаш бо муштариён кор мекунад ва шуморо аз вақти зиёд озод мекунад.|Программа в Telegram, которая сама работает с клиентами и экономит ваше время.|A program in Telegram that works with customers by itself and saves you time.',['Қабули фармоиш дар Telegram|Приём заказов в Telegram|Takes orders in Telegram','Ҷавоб ба саволҳои оддӣ|Ответы на частые вопросы|Answers common questions','Хабар ба шумо дар бораи ҳар фармоиш|Уведомление вам о каждом заказе|Notifies you about every order']],
+['AI-админ|AI-админ|AI admin','Ёрдамчии ҳушманд, ки ҳамчун администратор бо муштариён гап мезанад ва ба онҳо кумак мекунад.|Умный помощник, который общается с клиентами как администратор и помогает им.|A smart assistant that talks to customers like an administrator and helps them.',['Бо забони оддӣ гап мезанад|Общается простым языком|Talks in plain language','Ба саволҳо дар бораи тиҷорати шумо ҷавоб медиҳад|Отвечает на вопросы о вашем бизнесе|Answers questions about your business','Муштариро ба фармоиш ё тамос роҳнамоӣ мекунад|Ведёт клиента к заказу или контакту|Guides the customer to an order or contact']]];
+$('#sv').innerHTML=SV.map(([a,b,l],i)=>`<article class="cd rv" style="--d:${i*.1}s"><svg class="tic" viewBox="0 0 24 24">${SI[i]}</svg><h3 ${D(a)}></h3><p ${D(b)}></p><ul>${l.map(x=>`<li ${D(x)}></li>`).join('')}</ul><button type="button" class="btn lq" data-i="${i}"><span ${D('Фармоиш додан|Заказать|Order')}></span></button></article>`).join('');
+$('#sv').onclick=e=>{const b=e.target.closest('button');if(!b)return;setService(+b.dataset.i,1)};
+const SK=['Вебсайт|Сайт|Website','Telegram-бот|Telegram-бот|Telegram bot','AI-админ (ёрдамчии AI)|AI-админ (AI-помощник)|AI admin (AI assistant)','Ҳама якҷоя|Всё вместе|Everything together'];
+const SD=['Саҳифаи тиҷорати шумо|Страница вашего бизнеса|Your business page','Қабули фармоиш дар Telegram|Приём заказов в Telegram|Orders in Telegram','Ёрдамчии ҳушманд барои муштариён|Умный помощник для клиентов|A smart helper for customers','Сайт + бот + AI-админ|Сайт + бот + AI-админ|Site + bot + AI admin'];
+const PI=[SI[0],SI[1],SI[2],'<path d="m12 2 10 5-10 5L2 7Z"/><path d="m2 12 10 5 10-5M2 17l10 5 10-5"/>'];
+$('#pk').innerHTML=SK.map((a,i)=>`<button type="button" class="pb rv" style="--d:${i*.08}s" aria-pressed="false" data-i="${i}"><svg viewBox="0 0 24 24">${PI[i]}</svg><b ${D(a)}></b><span ${D(SD[i])}></span></button>`).join('');
+function setService(i,sc){$('input[name=service]').value=SK[i];$$('#pk .pb').forEach((b,j)=>b.setAttribute('aria-pressed',j==i));const first=$('#cs').hidden;$('#cs').hidden=false;if(first)go(0);else go(on(cur)?cur:nxt(cur,1));if(sc)$('#cs').scrollIntoView({behavior:'smooth'})}
+$('#pk').onclick=e=>{const b=e.target.closest('button');if(b)setService(+b.dataset.i,1)};
+const R=matchMedia('(prefers-reduced-motion:reduce)').matches;
+$('#stl').innerHTML=ST.map(s=>`<li><button type="button" ${D(s[0])}></button></li>`).join('');
+$('#stl').onclick=e=>{const b=e.target.closest('button');if(!b)return;const i=$$('#stl button').indexOf(b);if(i<cur)go(i)};
+$('#ty').onclick=e=>{const b=e.target.closest('button');if(!b)return;const r=$$('input[name=type]').find(x=>x.value==TY[+b.dataset.i][0]);if(r){r.checked=true;setService(0,0);go(2,1)}};
+$('#r1').onclick=()=>$('#ty').scrollBy({left:-320,behavior:'smooth'});
+$('#r2').onclick=()=>$('#ty').scrollBy({left:320,behavior:'smooth'});
+function rvS(){const e=$('#rv');e.innerHTML=P(e.dataset.t).split(' ').map(w=>`<span>${esc(w)}</span>`).join(' ');onS()}
+function onS(){const d=document.documentElement,m=d.scrollHeight-innerHeight;$('#sp').style.width=(m>0?scrollY/m*100:0)+'%';
+const t=$('#hw').getBoundingClientRect();$('#fl').style.height=Math.min(1,Math.max(0,(innerHeight*.6-t.top)/t.height))*100+'%';
+$$('#hw li').forEach(l=>l.classList.toggle('on',R||l.getBoundingClientRect().top<innerHeight*.62));
+const e=$('#rv'),r=e.getBoundingClientRect(),k=Math.min(1,Math.max(0,(innerHeight*.85-r.top)/(r.height+innerHeight*.3))),w=$$('span',e);w.forEach((x,i)=>x.classList.toggle('on',R||i<k*w.length*1.08))}
+addEventListener('scroll',onS,{passive:true});addEventListener('resize',onS);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+$$('.rv').forEach(e=>io.observe(e));
+document.addEventListener('pointermove',e=>{const c=e.target.closest&&e.target.closest('.cd');if(c){const r=c.getBoundingClientRect();c.style.setProperty('--x',e.clientX-r.left+'px');c.style.setProperty('--y',e.clientY-r.top+'px')}});
+const TG='';
+const IR=[[/(^|[^a-zа-яёӣӯқғҳҷ])(бот|bot)|telegram|телеграм/i,9],[/(^|[^a-zа-яёӣӯқғҳҷ])(ai|ии)([^a-zа-яёӣӯқғҳҷ]|$)|админ|admin|нейро|ҳушманд|умн/i,10],[/что такое|what is|вебсайт чист|сайт чист/i,0],[/нарх|цен|стоим|сколько ст|price|cost|how much|харҷ|пул/i,1],[/мӯҳлат|вақт|срок|долго|быстро|врем|занима|time|long|quick|рӯз|дней|days/i,2],[/дизайн|тарҳ|design|ранг|цвет|colo|стиль|услуб/i,3],[/смартфон|телефон|мобил|phone|mobile|планшет/i,4],[/нав кун|обнов|измен|update|change|тағйир/i,5],[/домен|domain/i,6],[/хостинг|hosting|хост/i,7],[/фармоиш|заказ|order|buy|харид|купить|сохтан|сделать|build|мехоҳам|хочу|want/i,8]];
+const GR='Салом! Ман ёрдамчии автоматии MUBIX TJ ҳастам (на шахс). Дар бораи вебсайт, Telegram-бот, AI-админ, нарх ва фармоиш пурсед.|Здравствуйте! Я автоматический помощник MUBIX TJ (не человек). Спрашивайте про сайт, Telegram-бота, AI-админа, цену и заказ.|Hello! I am the automatic assistant of MUBIX TJ (not a person). Ask about websites, Telegram bots, AI admins, price and ordering.';
+const FB='Бубахшед, ман инро нафаҳмидам. Саволро бо роҳи дигар нависед ё бо мо дар WhatsApp тамос гиред.|Извините, я не понял. Переформулируйте вопрос или напишите нам в WhatsApp.|Sorry, I did not get that. Try rephrasing or message us on WhatsApp.';
+function ans(q){q=q.toLowerCase();const m=IR.find(r=>r[0].test(q));if(m)return m[1];
+const w=q.replace(/[^\p{L}\s]/gu,' ').split(/\s+/).filter(x=>x.length>3).map(x=>x.slice(0,4));let b=-1,bs=0;
+FQ.forEach((f,k)=>{const t=(P(f[0])+' '+P(f[1])).toLowerCase(),s=w.filter(x=>t.includes(x)).length;if(s>bs){bs=s;b=k}});return bs>=2?b:-1}
+function say(t,who){const d=document.createElement('div');d.className='bm '+who;d.textContent=t;$('#am').append(d);$('#am').scrollTop=1e5}
+function acts(l){const d=document.createElement('div');d.className='ac';l.forEach(([t,f])=>{const b=document.createElement(typeof f=='string'?'a':'button');b.textContent=t;b.className='ch';if(typeof f=='string'){b.href=f;b.target='_blank';b.rel='noopener'}else{b.type='button';b.onclick=f}d.append(b)});$('#am').append(d);$('#am').scrollTop=1e5}
+function reply(i){const o=[[P('Анкетаро кушодан|Открыть анкету|Open the form'),()=>{closeAI();$('#order').scrollIntoView()}],['WhatsApp','https://wa.me/'+WA]];if(TG)o.push(['Telegram','https://t.me/'+TG]);
+if(i<0){say(P(FB),'bot');acts(o)}else{say(P(FQ[i][1]),'bot');acts(o)}}
+function aiReset(){$('#am').innerHTML='';say(P(GR),'bot');$('#aq').innerHTML='';[1,2,3,8].forEach(i=>{const b=document.createElement('button');b.type='button';b.className='ch';b.textContent=P(FQ[i][0]);b.onclick=()=>{say(P(FQ[i][0]),'u');reply(i)};$('#aq').append(b)})}
+function closeAI(){$('#ap').hidden=true;$('#ab').setAttribute('aria-expanded',false)}
+$('#ab').onclick=()=>{const h=$('#ap').hidden;$('#ap').hidden=!h;$('#ab').setAttribute('aria-expanded',h);if(h)$('#ai').focus()};
+$('#ax').onclick=closeAI;
+document.addEventListener('keydown',e=>{if(e.key=='Escape')closeAI()});
+$('#af').onsubmit=e=>{e.preventDefault();const q=$('#ai').value.trim();if(!q)return;say(q,'u');$('#ai').value='';reply(ans(q))};
+if(TG){const t=$('#tgb');t.hidden=false;t.href='https://t.me/'+TG}
+go(0);applyLang();
+</script>
+</body>
+</html>
